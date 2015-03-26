@@ -16,4 +16,10 @@
     <string name="menuitem_edit">Edit</string>
     <string name="menuitem_delete">Delete</string>
     <string name="no_movies">No Movies</string>
+    <string name="confirm_title">Are You Sure?</string>
+    <string name="confirm_message">This will permanently delete the movie</string>
+    <string name="ok">OK</string>
+    <string name="error_message">You must enter a movie name</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_delete">Delete</string>
 </resources>

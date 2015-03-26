@@ -14,7 +14,7 @@ import android.os.Build;
 
 
 public class MainActivity extends Activity {
-
+	public static final String ROW_ID = "row_id"; 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
