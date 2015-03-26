@@ -25,7 +25,10 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080010;
+        public static final int action_add=0x7f080010;
+        public static final int action_delete=0x7f080012;
+        public static final int action_edit=0x7f080011;
+        public static final int action_settings=0x7f080013;
         public static final int addEditScrollView=0x7f080001;
         public static final int detailsScrollView=0x7f080007;
         public static final int directorEditText=0x7f080004;
@@ -49,7 +52,9 @@ public final class R {
         public static final int fragment_details=0x7f030002;
     }
     public static final class menu {
-        public static final int main=0x7f070000;
+        public static final int fragment_contact_list_menu=0x7f070000;
+        public static final int fragment_details_menu=0x7f070001;
+        public static final int main=0x7f070002;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
@@ -62,6 +67,9 @@ public final class R {
         public static final int label_runtime=0x7f05000a;
         public static final int label_title=0x7f050007;
         public static final int label_year=0x7f050008;
+        public static final int menuitem_add=0x7f05000b;
+        public static final int menuitem_delete=0x7f05000d;
+        public static final int menuitem_edit=0x7f05000c;
         public static final int save_movie_btn=0x7f050006;
     }
     public static final class style {

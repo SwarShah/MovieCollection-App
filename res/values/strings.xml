@@ -12,4 +12,7 @@
     <string name="label_year">Year:</string>  
     <string name="label_director">Director:</string>
     <string name="label_runtime">Runtime:</string> 
+    <string name="menuitem_add">Add</string>
+    <string name="menuitem_edit">Edit</string>
+    <string name="menuitem_delete">Delete</string>
 </resources>
