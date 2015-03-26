@@ -34,13 +34,10 @@ public class DetailsFragment extends Fragment
    private DetailsFragmentListener listener;
    
    private long rowID = -1; // selected contact's rowID
-   private TextView nameTextView; // displays contact's name 
-   private TextView phoneTextView; // displays contact's phone
-   private TextView emailTextView; // displays contact's email
-   private TextView streetTextView; // displays contact's street
-   private TextView cityTextView; // displays contact's city
-   private TextView stateTextView; // displays contact's state
-   private TextView zipTextView; // displays contact's zip
+   private TextView titleTextView; // displays contact's name 
+   private TextView yearTextView; // displays contact's phone
+   private TextView directorTextView; // displays contact's email
+   private TextView runtimeTextView; // displays contact's street
    
    // set DetailsFragmentListener when fragment attached   
    @Override
@@ -84,13 +81,10 @@ public class DetailsFragment extends Fragment
       setHasOptionsMenu(true); // this fragment has menu items to display
 
       // get the EditTexts
-      nameTextView = (TextView) view.findViewById(R.id.nameTextView);
-      phoneTextView = (TextView) view.findViewById(R.id.phoneTextView);
-      emailTextView = (TextView) view.findViewById(R.id.emailTextView);
-      streetTextView = (TextView) view.findViewById(R.id.streetTextView);
-      cityTextView = (TextView) view.findViewById(R.id.cityTextView);
-      stateTextView = (TextView) view.findViewById(R.id.stateTextView);
-      zipTextView = (TextView) view.findViewById(R.id.zipTextView);
+      titleTextView = (TextView) view.findViewById(R.id.titleTextView);
+      yearTextView = (TextView) view.findViewById(R.id.yearTextView);
+      directorTextView = (TextView) view.findViewById(R.id.directorTextView);
+      runtimeTextView = (TextView) view.findViewById(R.id.runtimeTextView);
       return view;
    }
    
@@ -128,13 +122,10 @@ public class DetailsFragment extends Fragment
             // create Bundle containing contact data to edit
             Bundle arguments = new Bundle();
             arguments.putLong(MainActivity.ROW_ID, rowID);
-            arguments.putCharSequence("name", nameTextView.getText());
-            arguments.putCharSequence("phone", phoneTextView.getText());
-            arguments.putCharSequence("email", emailTextView.getText());
-            arguments.putCharSequence("street", streetTextView.getText());
-            arguments.putCharSequence("city", cityTextView.getText());
-            arguments.putCharSequence("state", stateTextView.getText());
-            arguments.putCharSequence("zip", zipTextView.getText());            
+            arguments.putCharSequence("title", titleTextView.getText());
+            arguments.putCharSequence("year", yearTextView.getText());
+            arguments.putCharSequence("director", directorTextView.getText());
+            arguments.putCharSequence("runtime", runtimeTextView.getText());          
             listener.onEditContact(arguments); // pass Bundle to listener
             return true;
          case R.id.action_delete:
@@ -156,7 +147,7 @@ public class DetailsFragment extends Fragment
       protected Cursor doInBackground(Long... params)
       {
          databaseConnector.open();
-         return databaseConnector.getOneContact(params[0]);
+         return databaseConnector.getOneMovie(params[0]);
       } 
 
       // use the Cursor returned from the doInBackground method
@@ -167,22 +158,16 @@ public class DetailsFragment extends Fragment
          result.moveToFirst(); // move to the first item 
    
          // get the column index for each data item
-         int nameIndex = result.getColumnIndex("name");
-         int phoneIndex = result.getColumnIndex("phone");
-         int emailIndex = result.getColumnIndex("email");
-         int streetIndex = result.getColumnIndex("street");
-         int cityIndex = result.getColumnIndex("city");
-         int stateIndex = result.getColumnIndex("state");
-         int zipIndex = result.getColumnIndex("zip");
+         int titleIndex = result.getColumnIndex("title");
+         int yearIndex = result.getColumnIndex("year");
+         int directorIndex = result.getColumnIndex("director");
+         int runtimeIndex = result.getColumnIndex("runtime");
    
          // fill TextViews with the retrieved data
-         nameTextView.setText(result.getString(nameIndex));
-         phoneTextView.setText(result.getString(phoneIndex));
-         emailTextView.setText(result.getString(emailIndex));
-         streetTextView.setText(result.getString(streetIndex));
-         cityTextView.setText(result.getString(cityIndex));
-         stateTextView.setText(result.getString(stateIndex));
-         zipTextView.setText(result.getString(zipIndex));
+         titleTextView.setText(result.getString(titleIndex));
+         yearTextView.setText(result.getString(yearIndex));
+         directorTextView.setText(result.getString(directorIndex));
+         runtimeTextView.setText(result.getString(runtimeIndex));
    
          result.close(); // close the result cursor
          databaseConnector.close(); // close database connection
@@ -229,7 +214,7 @@ public class DetailsFragment extends Fragment
                            @Override
                            protected Object doInBackground(Long... params)
                            {
-                              databaseConnector.deleteContact(params[0]); 
+                              databaseConnector.deleteMovie(params[0]); 
                               return null;
                            } 
       
@@ -252,18 +237,3 @@ public class DetailsFragment extends Fragment
       }; // end DialogFragment anonymous inner class
 } // end class DetailsFragment
 
-
-/**************************************************************************
- * (C) Copyright 1992-2014 by Deitel & Associates, Inc. and               *
- * Pearson Education, Inc. All Rights Reserved.                           *
- *                                                                        *
- * DISCLAIMER: The authors and publisher of this book have used their     *
- * best efforts in preparing the book. These efforts include the          *
- * development, research, and testing of the theories and programs        *
- * to determine their effectiveness. The authors and publisher make       *
- * no warranty of any kind, expressed or implied, with regard to these    *
- * programs or to the documentation contained in these books. The authors *
- * and publisher shall not be liable in any event for incidental or       *
- * consequential damages in connection with, or arising out of, the       *
- * furnishing, performance, or use of these programs.                     *
- **************************************************************************/
