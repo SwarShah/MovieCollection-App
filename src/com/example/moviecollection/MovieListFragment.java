@@ -67,7 +67,7 @@ public class MovieListFragment extends ListFragment
       movieListView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
       
       // map each contact's name to a TextView in the ListView layout
-      String[] from = new String[] { "name" };
+      String[] from = new String[] { "title" };
       int[] to = new int[] { android.R.id.text1 };
       movieAdapter = new SimpleCursorAdapter(getActivity(), 
          android.R.layout.simple_list_item_1, null, from, to, 0);

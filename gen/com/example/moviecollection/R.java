@@ -25,26 +25,28 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_add=0x7f080012;
-        public static final int action_delete=0x7f080011;
-        public static final int action_edit=0x7f080010;
-        public static final int action_settings=0x7f080013;
-        public static final int addEditScrollView=0x7f080001;
-        public static final int detailsScrollView=0x7f080007;
-        public static final int directorEditText=0x7f080004;
-        public static final int directorLabelTextView=0x7f08000c;
-        public static final int directorTextView=0x7f08000d;
+        public static final int action_add=0x7f080014;
+        public static final int action_delete=0x7f080013;
+        public static final int action_edit=0x7f080012;
+        public static final int action_settings=0x7f080015;
+        public static final int addEditScrollView=0x7f080003;
+        public static final int detailsScrollView=0x7f080009;
+        public static final int directorEditText=0x7f080006;
+        public static final int directorLabelTextView=0x7f08000e;
+        public static final int directorTextView=0x7f08000f;
         public static final int fragmentContainer=0x7f080000;
-        public static final int runtimeEditText=0x7f080005;
-        public static final int runtimeLabelTextView=0x7f08000e;
-        public static final int runtimeTextView=0x7f08000f;
-        public static final int saveMovie=0x7f080006;
-        public static final int titleEditText=0x7f080002;
-        public static final int titleLabelTextView=0x7f080008;
-        public static final int titleTextView=0x7f080009;
-        public static final int yearEditText=0x7f080003;
-        public static final int yearLabelTextView=0x7f08000a;
-        public static final int yearTextView=0x7f08000b;
+        public static final int movieListFragment=0x7f080001;
+        public static final int rightPaneContainer=0x7f080002;
+        public static final int runtimeEditText=0x7f080007;
+        public static final int runtimeLabelTextView=0x7f080010;
+        public static final int runtimeTextView=0x7f080011;
+        public static final int saveMovie=0x7f080008;
+        public static final int titleEditText=0x7f080004;
+        public static final int titleLabelTextView=0x7f08000a;
+        public static final int titleTextView=0x7f08000b;
+        public static final int yearEditText=0x7f080005;
+        public static final int yearLabelTextView=0x7f08000c;
+        public static final int yearTextView=0x7f08000d;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
