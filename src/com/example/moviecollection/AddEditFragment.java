@@ -77,10 +77,10 @@ public class AddEditFragment extends Fragment
       if (movieInfoBundle != null)
       {
          rowID = movieInfoBundle.getLong(MainActivity.ROW_ID);
-         titleEditText.setText(movieInfoBundle.getString("name"));  
-         yearEditText.setText(movieInfoBundle.getString("phone"));  
-         directorEditText.setText(movieInfoBundle.getString("email"));  
-         runtimeEditText.setText(movieInfoBundle.getString("street"));   
+         titleEditText.setText(movieInfoBundle.getString("title"));  
+         yearEditText.setText(movieInfoBundle.getString("year"));  
+         directorEditText.setText(movieInfoBundle.getString("director"));  
+         runtimeEditText.setText(movieInfoBundle.getString("runtime"));   
       } 
       
       // set Save Contact Button's event listener 
